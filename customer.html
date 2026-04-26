@@ -1,0 +1,141 @@
+// Run after page loads
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* =========================
+       1. LIVE DATE & TIME
+    ========================== */
+    function updateTime() {
+        const now = new Date();
+
+        const formatted =
+            now.toLocaleDateString() + " " +
+            now.toLocaleTimeString();
+
+        document.querySelector(".timestamp").innerText = formatted;
+    }
+
+    setInterval(updateTime, 1000);
+
+
+    /* =========================
+       2. SIDEBAR ACTIVE LINK
+    ========================== */
+    const navLinks = document.querySelectorAll(".side-nav a");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            navLinks.forEach(l => l.classList.remove("active"));
+            this.classList.add("active");
+        });
+    });
+
+
+    /* =========================
+       3. CARD HOVER ANIMATION
+    ========================== */
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        card.addEventListener("mouseenter", () => {
+            card.style.transform = "scale(1.03)";
+            card.style.transition = "0.3s";
+        });
+
+        card.addEventListener("mouseleave", () => {
+            card.style.transform = "scale(1)";
+        });
+    });
+
+
+    /* =========================
+       4. ACTION BUTTON CLICK
+    ========================== */
+    const actions = document.querySelectorAll(".action-item");
+
+    actions.forEach(item => {
+        item.addEventListener("click", () => {
+            alert(item.innerText + " clicked!");
+        });
+    });
+
+
+    /* =========================
+       5. DOWNLOAD BUTTON
+    ========================== */
+    const downloadBtn = document.querySelector(".btn-download");
+
+    downloadBtn.addEventListener("click", () => {
+        alert("Download Started...");
+    });
+
+
+    /* =========================
+       6. NOTIFICATION BELL
+    ========================== */
+    const bell = document.querySelector(".notification-icon");
+
+    bell.addEventListener("click", () => {
+        alert("No new notifications");
+    });
+
+
+    /* =========================
+       7. SIMPLE SEARCH FEATURE
+    ========================== */
+    // Create search box dynamically
+    const topBar = document.querySelector(".top-bar");
+
+    const searchBox = document.createElement("input");
+    searchBox.placeholder = "Search...";
+    searchBox.style.padding = "6px 10px";
+    searchBox.style.borderRadius = "5px";
+    searchBox.style.border = "1px solid #ccc";
+    searchBox.style.marginLeft = "20px";
+
+    topBar.appendChild(searchBox);
+
+    searchBox.addEventListener("keyup", function () {
+        let value = this.value.toLowerCase();
+
+        navLinks.forEach(link => {
+            let text = link.innerText.toLowerCase();
+            link.style.display = text.includes(value) ? "flex" : "none";
+        });
+    });
+
+
+    /* =========================
+       8. SIDEBAR TOGGLE (MOBILE)
+    ========================== */
+    const sidebar = document.querySelector(".sidebar");
+
+    const toggleBtn = document.createElement("button");
+    toggleBtn.innerText = "☰";
+    toggleBtn.style.fontSize = "20px";
+    toggleBtn.style.marginRight = "20px";
+
+    topBar.prepend(toggleBtn);
+
+    toggleBtn.addEventListener("click", () => {
+        sidebar.style.display =
+            sidebar.style.display === "none" ? "block" : "none";
+    });
+
+
+    /* =========================
+       9. FADE-IN ANIMATION
+    ========================== */
+    const allSections = document.querySelectorAll(".hero-banner, .card, .action-item");
+
+    allSections.forEach((el, index) => {
+        el.style.opacity = 0;
+        el.style.transform = "translateY(20px)";
+
+        setTimeout(() => {
+            el.style.transition = "0.5s";
+            el.style.opacity = 1;
+            el.style.transform = "translateY(0)";
+        }, index * 150);
+    });
+
+});v
