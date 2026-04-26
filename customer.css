@@ -1,0 +1,187 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: #f0f4f8;
+}
+
+.dashboard-wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: white;
+    border-right: 1px solid #d1d5db;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-logo {
+    padding: 30px 10px;
+    text-align: center;
+}
+
+.bank-icon {
+    font-size: 50px;
+    color: #0d47a1;
+}
+
+.sidebar-logo h2 {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.sidebar-logo p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #888;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.nav-links a i {
+    width: 30px;
+    font-size: 18px;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    background: #eef2ff;
+    color: #0d47a1;
+}
+
+.logout-btn {
+    color: #d32f2f !important;
+    margin-top: auto;
+}
+
+/* Main Content Section */
+.main-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-navbar {
+    background: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.date-time { color: #d32f2f; font-weight: bold; }
+.branch-info { color: #0d47a1; font-weight: bold; font-size: 18px; }
+.user-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #e5e7eb;
+    padding: 6px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+/* Toolbar: Search & Buttons */
+.toolbar {
+    padding: 25px 40px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.search-container {
+    flex: 1;
+    background: white;
+    border-radius: 30px;
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+}
+
+.button-group { display: flex; gap: 12px; }
+
+.action-btn {
+    background: #c0c0c0;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: inset 0 -3px 5px rgba(0,0,0,0.15);
+}
+
+.action-btn:hover { background: #b0b0b0; }
+
+/* Form/Details Grid */
+.details-grid {
+    padding: 0 40px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.info-column { display: flex; flex-direction: column; gap: 15px; }
+
+.capsule-field {
+    background: white;
+    border-radius: 30px;
+    padding: 8px 25px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #f0f0f0;
+}
+
+.field-label { width: 80px; font-weight: bold; color: #0d47a1; font-size: 14px; }
+.capsule-field input { flex: 1; border: none; outline: none; padding: 5px; color: #444; }
+
+.blue-icon { font-size: 24px; color: #0d47a1; margin-right: 15px; width: 30px; text-align: center; }
+.red-edit { color: #d32f2f; cursor: pointer; font-size: 14px; }
+
+/* Photo Section */
+.photo-container { display: flex; gap: 20px; margin-bottom: 5px; }
+
+.image-box {
+    width: 180px;
+    height: 180px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+.img-edit {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #d32f2f;
+    background: white;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
