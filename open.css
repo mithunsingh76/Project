@@ -1,0 +1,275 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background: #fff;
+    border-right: 1px solid #d1d5db;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header {
+    padding: 30px 10px;
+    text-align: center;
+}
+
+.main-logo {
+    font-size: 50px;
+    color: #0b4a9e;
+}
+
+.sidebar-header h2 {
+    color: #333;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.sidebar-header p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #777;
+}
+
+.side-nav {
+    flex: 1;
+}
+
+.side-nav a {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.side-nav a i {
+    width: 30px;
+    font-size: 18px;
+}
+
+.side-nav a:hover, .side-nav a.active {
+    background: #f0f7ff;
+    color: #0b4a9e;
+}
+
+.logout-link {
+    color: #ef4444 !important;
+    margin-top: auto;
+    border-top: 1px solid #eee;
+}
+
+/* Hero Banner */
+.hero-banner {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
+    margin-bottom: 30px;
+}
+
+.hero-center h2 {
+    font-size: 36px;
+    color: #212121;
+}
+
+.hero-center p {
+    text-align: center;
+    letter-spacing: 3px;
+    color: #757575;
+}
+
+.hero-left img, .hero-right img {
+    width: 120px;
+}
+
+/* Bottom Grid */
+.bottom-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+
+/* Main Content Styles */
+.content-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-bar {
+    background: #fff;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.timestamp { color: #d9534f; font-weight: bold; }
+.branch-name { color: #0b4a9e; font-weight: bold; text-transform: uppercase; }
+
+.user-badge {
+    display: inline-flex;
+    align-items: center;
+    background: #f1f5f9;
+    padding: 6px 18px;
+    border-radius: 25px;
+    margin-left: 20px;
+}
+
+.user-badge i { font-size: 24px; color: #0b4a9e; margin-right: 10px; }
+
+/* Form Card Styles */
+.form-wrapper {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.account-form-card {
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 950px;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 40px;
+}
+
+/* Left Photo Section */
+.upload-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.photo-box, .signature-box {
+    width: 180px;
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.photo-box { height: 180px; }
+.photo-box i { font-size: 90px; color: #cbd5e1; }
+
+.signature-box { height: 80px; margin-top: 20px; border-bottom: 2px solid #0b4a9e; }
+.sig-text { color: #94a3b8; font-style: italic; }
+
+.upload-btn {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Right Form Fields */
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.field-row {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.field-row label {
+    width: 140px;
+    font-weight: 700;
+    color: #334155;
+    font-size: 14px;
+}
+
+.field-row input[type="text"], 
+.field-row input[type="email"], 
+.field-row input[type="date"] {
+    flex: 1;
+    background: #f1f5f9;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    outline-color: #0b4a9e;
+}
+
+.radio-options {
+    display: flex;
+    gap: 25px;
+    font-weight: 600;
+}
+
+.balance-label { margin: 0 10px; color: #0b4a9e; font-weight: bold; font-size: 14px; }
+.balance-input { width: 120px !important; flex: none !important; }
+
+.dob-icon, .mobile-icon {
+    position: absolute;
+    right: 15px;
+    color: #0b4a9e;
+    font-size: 20px;
+}
+
+/* Action Buttons */
+.form-actions {
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 20px;
+}
+
+.btn {
+    padding: 12px 60px;
+    border-radius: 30px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    background: #0b4a9e;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
