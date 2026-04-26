@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bank - Withdraw</title>
+    <link rel="stylesheet" href="Withdraw.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo-area">
+                <i class="fas fa-lock lock-icon"></i>
+                <h2>TRUSTWELL BANK</h2>
+                <p>ADMIN PANEL</p>
+            </div>
+            <nav class="nav-menu">
+                <a href="3 Home .html"><i class="fas fa-home"></i> Home</a>
+                <a href="4 Open.html"><i class="fas fa-plus-circle"></i> Open Account</a>
+                <a href="5 Customer.html"><i class="fas fa-user"></i> Customer</a>
+                <a href="6 Withdraw.html" class="active"><i class="fas fa-money-bill-alt"></i> Withdraw</a>
+                <a href="7 Deposit.html"><i class="fas fa-donate"></i> Deposit</a>
+                <a href="8 Statement.html"><i class="fas fa-file-invoice"></i> Statement</a>
+                <a href="9 Transtation.html"><i class="fas fa-exchange-alt"></i> Transaction</a>
+                <a href="10 Employee.html"><i class="fas fa-users"></i> Employee</a>
+                <a href="11 Logout.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <div class="timer">10-03-2026 09:30:50 PM</div>
+                <div class="branch"><i class="fas fa-university"></i> Head Branch</div>
+                <div class="user-info">
+                    <i class="fas fa-bell"></i>
+                    <div class="profile-pill">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Welcome To Trustwell Bank</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="search-section">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search by A/C No. or Name">
+                    <i class="fas fa-search"></i>
+                </div>
+            </section>
+
+            <div class="withdraw-grid">
+                <div class="input-column">
+                    <div class="capsule">
+                        <span class="label">A/C No. :</span>
+                        <input type="text">
+                    </div>
+                    <div class="capsule">
+                        <span class="label">Name :</span>
+                        <input type="text">
+                    </div>
+                    <div class="capsule">
+                        <span class="label">F.Name :</span>
+                        <input type="text">
+                    </div>
+                    <div class="capsule">
+                        <span class="label">Mobile :</span>
+                        <input type="text">
+                    </div>
+                </div>
+
+                <div class="display-column">
+                    <div class="photo-boxes">
+                        <div class="empty-box"></div>
+                        <div class="empty-box"></div>
+                    </div>
+                    <div class="balance-display">
+                        <span class="balance-title">Balance :</span>
+                        <span class="balance-amount"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-footer">
+                <div class="amount-capsule">
+                    <span class="amount-label">Withdraw Amount</span>
+                    <input type="text">
+                </div>
+                <button class="withdraw-btn">Withdraw</button>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
