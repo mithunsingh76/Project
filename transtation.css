@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bank - Transaction</title>
+    <link rel="stylesheet" href="transtation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="app-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <i class="fas fa-lock logo-main"></i>
+                <h2>TRUSTWELL BANK</h2>
+                <p>ADMIN PANEL</p>
+            </div>
+            <nav class="nav-links">
+               <a href="3 Home .html"><i class="fas fa-home"></i> Home</a>
+                <a href="4 Open.html"><i class="fas fa-plus-circle"></i> Open Account</a>
+                <a href="5 Customer.html"><i class="fas fa-user"></i> Customer</a>
+                <a href="6 Withdraw.html"><i class="fas fa-money-bill-alt"></i> Withdraw</a>
+                <a href="7 Deposit.html"><i class="fas fa-donate"></i> Deposit</a>
+                <a href="8 Statement.html"><i class="fas fa-file-invoice"></i> Statement</a>
+                <a href="9 Transtation.html" class="active"><i class="fas fa-exchange-alt"></i> Transaction</a>
+                <a href="10 Employee.html"><i class="fas fa-users"></i> Employee</a>
+                <a href="11 Logout.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+            </nav>
+        </aside>
+
+        <main class="main-body">
+            <header class="top-header">
+                <div class="status-date">10-03-2026 09:35:47 PM</div>
+                <div class="branch-label"><i class="fas fa-university"></i> Head Branch</div>
+                <div class="user-controls">
+                    <i class="fas fa-bell"></i>
+                    <div class="user-capsule">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Welcome To Trustwell Bank</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="search-container">
+                <div class="search-input-wrapper">
+                    <input type="text" placeholder="Search Transactions...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+
+            <div class="transaction-box">
+                <p class="branch-opened">BRANCH OPENED ON:</p>
+                <i class="fas fa-print print-icon"></i>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="val-row"><i class="fas fa-indian-rupee-sign"></i> <span class="green-text">965108990.2</span></div>
+                        <p class="stat-label">BANK BALANCE</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="val-row"><i class="fas fa-indian-rupee-sign"></i> <span class="blue-text">1026520964.76</span></div>
+                        <p class="stat-label">TOTAL DEPOSIT</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="val-row"><i class="fas fa-indian-rupee-sign"></i> <span class="blue-text">61411974.56</span></div>
+                        <p class="stat-label">TOTAL WITHDRAWAL</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="val-row"><i class="fas fa-indian-rupee-sign"></i> <span class="dark-text">C = 5003502 | D = 5001404</span></div>
+                        <p class="stat-label">TODAY TRANSACTION</p>
+                    </div>
+                </div>
+
+                <table class="branch-details-table">
+                    <thead>
+                        <tr>
+                            <th>BRANCH NAME</th>
+                            <th>CODE</th>
+                            <th>IFSC</th>
+                            <th>INTEREST RATE</th>
+                            <th>LOCATION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Head Branch</td>
+                            <td>PNB</td>
+                            <td>PUNB0732300 </td>
+                            <td class="small-text">S: 4% | C: 2.5% | FD: 6%</td>
+                            <td>BHORE, INDIA (841426)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="table-scroll-container">
+                    <table class="history-table">
+                        <thead>
+                            <tr>
+                                <th>Date & Time</th>
+                                <th>Transaction ID</th>
+                                <th>Transaction Type</th>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>20-02-2026 20:10</td><td>100111111155</td><td>Credit | Cash</td><td>TRUB0732300</td><td>ANUP</td><td>1.2</td></tr>
+                            <tr><td>20-02-2026 20:09</td><td>100111111154</td><td>Credit | Cash</td><td>TRUB0732300</td><td>MITHUN</td><td>1.4</td></tr>
+                            <tr><td>20-02-2026 20:08</td><td>100111111153</td><td>Credit | Cash</td><td>TRUB0732300</td><td>DEEPAK</td><td>1.6</td></tr>
+                            <tr><td>20-02-2026 20:07</td><td>100111111152</td><td>Credit | Cash</td><td>TRUB0732300</td><td>PAWAN</td><td>1.88</td></tr>
+                            <tr><td>20-02-2026 20:06</td><td>100111111151</td><td>Credit | Cash</td><td>TRUB0732300</td><td>AMIT</td><td>2.12</td></tr>
+                            <tr><td>20-02-2026 20:05</td><td>100111111150</td><td>Credit | Cash</td><td>TRUB0732300</td><td>VISHAL</td><td>1.5</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
