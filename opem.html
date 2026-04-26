@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bank - Open Account</title>
+    <link rel="stylesheet" href="open.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-lock main-logo"></i>
+                <h2>TRUSTWELL BANK</h2>
+                <p>ADMIN PANEL</p>
+            </div>
+            
+            <nav class="side-nav">
+                <a href="3 Home .html"><i class="fas fa-home"></i> Home</a>
+                <a href="4 Open.html" class="active"><i class="fas fa-plus-circle"></i> Open Account</a>
+                <a href="5 Customer.html"><i class="fas fa-user"></i> Customer</a>
+                <a href="6 Withdraw.html"><i class="fas fa-money-bill-alt"></i> Withdraw</a>
+                <a href="7 Deposit.html"><i class="fas fa-donate"></i> Deposit</a>
+                <a href="8 Statement.html"><i class="fas fa-file-invoice"></i> Statement</a>
+                <a href="9 Transtation.html"><i class="fas fa-exchange-alt"></i> Transaction</a>
+                <a href="10 Employee.html"><i class="fas fa-users"></i> Employee</a>
+                <a href="11 Logout.html" class="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </aside>
+
+         <main class="content-area">
+            <header class="top-bar">
+                <div class="timestamp">06-03-2026 06:29:48 PM</div>
+                <div class="branch-name"><i class="fas fa-university"></i> Head Branch</div>
+                <div class="user-profile">
+                    <i class="fas fa-bell notification-icon"></i>
+                    <div class="user-badge">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Welcome To Trustwell Bank</span>
+                    </div>
+                </div>
+            </header>
+            <div class="form-wrapper">
+                <div class="account-form-card">
+                    <div class="upload-sidebar">
+                        <div class="photo-box">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <button class="upload-btn"><i class="fas fa-upload"></i> Upload</button>
+                        
+                        <div class="signature-box">
+                            <span class="sig-text">Signature</span>
+                        </div>
+                        <button class="upload-btn"><i class="fas fa-upload"></i> Upload</button>
+                    </div>
+
+                    <div class="form-fields">
+                        <div class="field-row">
+                            <label>Account Type</label>
+                            <div class="radio-options">
+                                <label><input type="radio" name="accType" checked> Saving</label>
+                                <label><input type="radio" name="accType"> Current</label>
+                                <label><input type="radio" name="accType"> FD</label>
+                            </div>
+                        </div>
+
+                        <div class="field-row">
+                            <label>Customer ID</label>
+                            <input type="text" value="HED11000000008" class="id-input" readonly>
+                            <span class="balance-label">Opening Balance Rs.</span>
+                            <input type="text" class="balance-input">
+                        </div>
+
+                        <div class="field-row"><label>Name</label><input type="text" class="full-input"></div>
+                        <div class="field-row"><label>Father's Name</label><input type="text" class="full-input"></div>
+                        <div class="field-row"><label>Mother's Name</label><input type="text" class="full-input"></div>
+                        
+                        <div class="field-row">
+                            <label>Date Of Birth</label>
+                            <input type="date" class="date-input">
+                            <i class="fas fa-user-circle dob-icon"></i>
+                        </div>
+
+                        <div class="field-row">
+                            <label>Gender</label>
+                            <div class="radio-options">
+                                <label><input type="radio" name="gender"> Male</label>
+                                <label><input type="radio" name="gender"> Female</label>
+                                <label><input type="radio" name="gender"> Transgender</label>
+                            </div>
+                        </div>
+
+                        <div class="field-row">
+                            <label>Mobile</label>
+                            <input type="text" class="full-input">
+                            <i class="fas fa-pen mobile-icon"></i>
+                        </div>
+                        
+                        <div class="field-row"><label>E-mail</label><input type="email" class="full-input"></div>
+                        <div class="field-row"><label>Address</label><input type="text" class="full-input"></div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button class="btn btn-cancel">Cancel</button>
+                        <button class="btn btn-open">OPEN</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
