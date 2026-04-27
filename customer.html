@@ -1,141 +1,134 @@
-// Run after page loads
-document.addEventListener("DOMContentLoaded", function () {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anup Bank - Customer Details</title>
+    <link rel="stylesheet" href="customer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
 
-    /* =========================
-       1. LIVE DATE & TIME
-    ========================== */
-    function updateTime() {
-        const now = new Date();
+    <div class="dashboard-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <i class="fas fa-lock bank-icon"></i>
+                <h2>TRUSTWELL BANK</h2>
+                <p>Admin Panel</p>
+            </div>
+            <nav class="nav-links">
+                <a href="3 Home .html"><i class="fas fa-home"></i> Home</a>
+                <a href="4 Open.html"><i class="fas fa-plus-circle"></i> Open Account</a>
+                <a href="5 Customer.html" class="active"><i class="fas fa-user"></i> Customer</a>
+                <a href="6 Withdraw.html"><i class="fas fa-money-bill-alt"></i> Withdraw</a>
+                <a href="7 Deposit.html"><i class="fas fa-donate"></i> Deposit</a>
+                <a href="8 Statement.html"><i class="fas fa-file-invoice"></i> Statement</a>
+                <a href="9 Transtation.html"><i class="fas fa-exchange-alt"></i> Transaction</a>
+                <a href="10 Employee.html"><i class="fas fa-users"></i> Employee</a>
+                <a href="11 Logout.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </aside>
 
-        const formatted =
-            now.toLocaleDateString() + " " +
-            now.toLocaleTimeString();
+        <main class="main-body">
+            <header class="top-navbar">
+                <div class="date-time">10-03-2026 06:36:28 PM</div>
+                <div class="branch-info"><i class="fas fa-university"></i> Head Branch</div>
+                <div class="profile-section">
+                    <i class="fas fa-bell notify"></i>
+                    <div class="user-pill">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Welcome To Trustwell Bank</span>
+                    </div>
+                </div>
+            </header>
 
-        document.querySelector(".timestamp").innerText = formatted;
-    }
+            <section class="toolbar">
+                <div class="search-container">
+                    <input type="text" placeholder="Search...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="button-group">
+                    <button class="action-btn">Previous</button>
+                    <button class="action-btn">Next</button>
+                    <button class="action-btn">Update</button>
+                    <button class="action-btn">Delete</button>
+                </div>
+            </section>
 
-    setInterval(updateTime, 1000);
+            <div class="details-grid">
+                <div class="info-column">
+                    <div class="capsule-field">
+                        <span class="field-label">C. ID</span>
+                        <input type="text" value="HED11000000008" readonly>
+                    </div>
+                    <div class="capsule-field">
+                        <span class="field-label">Type</span>
+                        <input type="text" value="Saving">
+                    </div>
+                    <div class="capsule-field">
+                        <span class="field-label">IFSC</span>
+                        <input type="text" value="TRUB0732300">
+                    </div>
+                    <div class="capsule-field">
+                        <span class="field-label">A/C No.</span>
+                        <input type="text" value="100000000012">
+                    </div>
+                    <div class="capsule-field">
+                        <span class="field-label">Name</span>
+                        <input type="text">
+                        <i class="fas fa-edit red-edit"></i>
+                    </div>
+                    <div class="capsule-field">
+                        <span class="field-label">F.Name</span>
+                        <input type="text">
+                        <i class="fas fa-edit red-edit"></i>
+                    </div>
+                    <div class="capsule-field">
+                        <span class="field-label">M.Name</span>
+                        <input type="text">
+                        <i class="fas fa-edit red-edit"></i>
+                    </div>
+                    <div class="capsule-field">
+                        <span class="field-label">D.O.B</span>
+                        <input type="text">
+                        <i class="fas fa-edit red-edit"></i>
+                    </div>
+                </div>
 
+                <div class="info-column">
+                    <div class="photo-container">
+                        <div class="image-box"><i class="fas fa-edit img-edit"></i></div>
+                        <div class="image-box"><i class="fas fa-edit img-edit"></i></div>
+                    </div>
+                    <div class="capsule-field">
+                        <i class="fas fa-users blue-icon"></i>
+                        <input type="text">
+                        <i class="fas fa-edit red-edit"></i>
+                    </div>
+                    <div class="capsule-field">
+                        <i class="fas fa-mobile-alt blue-icon"></i>
+                        <input type="text">
+                        <i class="fas fa-edit red-edit"></i>
+                    </div>
+                    <div class="capsule-field">
+                        <i class="fas fa-envelope blue-icon"></i>
+                        <input type="text">
+                        <i class="fas fa-edit red-edit"></i>
+                    </div>
+                    <div class="capsule-field">
+                        <i class="fas fa-map-marker-alt blue-icon"></i>
+                        <input type="text">
+                        <i class="fas fa-edit red-edit"></i>
+                    </div>
+                    <div class="capsule-field">
+                        <i class="fas fa-id-card blue-icon"></i>
+                        <input type="text">
+                        <i class="fas fa-edit red-edit"></i>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
 
-    /* =========================
-       2. SIDEBAR ACTIVE LINK
-    ========================== */
-    const navLinks = document.querySelectorAll(".side-nav a");
-
-    navLinks.forEach(link => {
-        link.addEventListener("click", function () {
-            navLinks.forEach(l => l.classList.remove("active"));
-            this.classList.add("active");
-        });
-    });
-
-
-    /* =========================
-       3. CARD HOVER ANIMATION
-    ========================== */
-    const cards = document.querySelectorAll(".card");
-
-    cards.forEach(card => {
-        card.addEventListener("mouseenter", () => {
-            card.style.transform = "scale(1.03)";
-            card.style.transition = "0.3s";
-        });
-
-        card.addEventListener("mouseleave", () => {
-            card.style.transform = "scale(1)";
-        });
-    });
-
-
-    /* =========================
-       4. ACTION BUTTON CLICK
-    ========================== */
-    const actions = document.querySelectorAll(".action-item");
-
-    actions.forEach(item => {
-        item.addEventListener("click", () => {
-            alert(item.innerText + " clicked!");
-        });
-    });
-
-
-    /* =========================
-       5. DOWNLOAD BUTTON
-    ========================== */
-    const downloadBtn = document.querySelector(".btn-download");
-
-    downloadBtn.addEventListener("click", () => {
-        alert("Download Started...");
-    });
-
-
-    /* =========================
-       6. NOTIFICATION BELL
-    ========================== */
-    const bell = document.querySelector(".notification-icon");
-
-    bell.addEventListener("click", () => {
-        alert("No new notifications");
-    });
-
-
-    /* =========================
-       7. SIMPLE SEARCH FEATURE
-    ========================== */
-    // Create search box dynamically
-    const topBar = document.querySelector(".top-bar");
-
-    const searchBox = document.createElement("input");
-    searchBox.placeholder = "Search...";
-    searchBox.style.padding = "6px 10px";
-    searchBox.style.borderRadius = "5px";
-    searchBox.style.border = "1px solid #ccc";
-    searchBox.style.marginLeft = "20px";
-
-    topBar.appendChild(searchBox);
-
-    searchBox.addEventListener("keyup", function () {
-        let value = this.value.toLowerCase();
-
-        navLinks.forEach(link => {
-            let text = link.innerText.toLowerCase();
-            link.style.display = text.includes(value) ? "flex" : "none";
-        });
-    });
-
-
-    /* =========================
-       8. SIDEBAR TOGGLE (MOBILE)
-    ========================== */
-    const sidebar = document.querySelector(".sidebar");
-
-    const toggleBtn = document.createElement("button");
-    toggleBtn.innerText = "☰";
-    toggleBtn.style.fontSize = "20px";
-    toggleBtn.style.marginRight = "20px";
-
-    topBar.prepend(toggleBtn);
-
-    toggleBtn.addEventListener("click", () => {
-        sidebar.style.display =
-            sidebar.style.display === "none" ? "block" : "none";
-    });
-
-
-    /* =========================
-       9. FADE-IN ANIMATION
-    ========================== */
-    const allSections = document.querySelectorAll(".hero-banner, .card, .action-item");
-
-    allSections.forEach((el, index) => {
-        el.style.opacity = 0;
-        el.style.transform = "translateY(20px)";
-
-        setTimeout(() => {
-            el.style.transition = "0.5s";
-            el.style.opacity = 1;
-            el.style.transform = "translateY(0)";
-        }, index * 150);
-    });
-
-});v
+</body>
+</html>
